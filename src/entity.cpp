@@ -1,0 +1,1 @@
+#include <studium/entity.hpp>
