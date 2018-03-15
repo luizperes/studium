@@ -3,7 +3,7 @@
 
 int main(int argc, char** argv)
 {
-    studium::Renderer2D renderer;
+    studium::render::Renderer2D renderer;
     renderer.init();
     renderer.game_loop();
     renderer.unload();

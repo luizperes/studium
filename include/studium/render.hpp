@@ -10,15 +10,20 @@
 
 namespace studium
 {
-    class Renderer2D
+    //! Wraps all functions and structures related to graphics rendering.
+    namespace render
     {
-    private:
-        GLFWwindow* window;
-        glm::vec2   size;
-    public:
-        ~Renderer2D();
-        bool init();
-        bool game_loop();
-        void unload();
-    };
+        //!  A class to manage the window and the rendering context.
+        class Renderer2D
+        {
+        private:
+            GLFWwindow* window;
+            glm::vec2   size;
+        public:
+            ~Renderer2D();
+            bool init();
+            bool game_loop();
+            void unload();
+        };
+    }
 }

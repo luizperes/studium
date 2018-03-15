@@ -1,8 +1,15 @@
 #pragma once
 
-class Entity
+namespace studium
 {
-private:
+    //! Wraps all functions and structures related to game object programming.
+    namespace entity
+    {
+        class Entity
+        {
+        private:
     
-public:
-};
+        public:
+        };
+    }
+}

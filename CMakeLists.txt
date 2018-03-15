@@ -1,5 +1,5 @@
 #################################################################
-#  Copyright (c) 2017 Lucas Vieira <lucasvieira@protonmail.com> #
+#  Copyright (c) 2018 Lucas Vieira <lucasvieira@protonmail.com> #
 #                                                               #
 #  This file is distributed under the MIT License. See LICENSE  #
 #  for more information.                                        #
@@ -62,3 +62,20 @@ target_link_libraries(engine_test
   ${EPOXY_LIBRARIES}
   glfw
   studium)
+
+
+
+# Installation
+
+# Header files
+INSTALL(DIRECTORY ${ENGINE_INCLUDE_DIR}
+  DESTINATION include
+  FILES_MATCHING PATTERN "*.hpp")
+
+# Library files
+INSTALL(TARGETS studium
+  ARCHIVE DESTINATION lib)
+
+# Binaries
+#INSTALL(TARGETS engine_test
+#  RUNTIME DESTINATION bin)

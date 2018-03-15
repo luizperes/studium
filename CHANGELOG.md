@@ -6,6 +6,9 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 ### Added
+- `consts` namespace with useful constant values.
+- New proper README file, still a work-in-progress.
+- Doxygen documentation support, along with some documentation.
 - Sources from another project, which was privately being developed.
 - New contribution guidelines.
 - New changelog file.

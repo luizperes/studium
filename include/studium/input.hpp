@@ -5,6 +5,7 @@
 
 namespace studium
 {
+    //! Wraps all functions and structures related to input handling.
     namespace input
     {
         // Input callbacks, you shouldn't need to care about those
