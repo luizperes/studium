@@ -23,6 +23,8 @@ namespace studium
 
         //! Creates a new entity for game usage.
         //  \return An instance of an Entity.
+        //  \todo Make sure we use all pooled available entity slots
+        //  before using a new GUID.
         Entity create_entity();
 
         /*!
