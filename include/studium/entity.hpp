@@ -21,23 +21,29 @@ namespace studium
         //  indexed by their GUID.
         std::map<u64, component_lst>& get_entity_collection();
 
-        //! Creates a new entity for game usage.
-        //  \return An instance of an Entity.
-        //  \todo Make sure we use all pooled available entity slots
-        //  before using a new GUID.
+        /*!
+         * \brief Creates a new entity for game usage.
+         * \return An instance of an Entity.
+         * \todo Make sure we use all pooled available entity slots
+         * before using a new GUID.
+         */
         Entity create_entity();
 
         /*!
          * \brief Yields an entity containing the desired GUID.
+         *
          * \param guid GUID for an existing entity.
          * \return A value that might be an Entity or not.
          */
         std::optional<Entity> entity_from(u64 guid);
         
-        //! Represents a single entity with a permanent GUID.
-        //  \note This class is final. Therefore, you cannot derive it.
-        //  Due to obvious reasons, it is important to keep the OOP aspect
-        //  of the entity system to a minimum.
+        /*!
+         * \brief Represents a single entity with a permanent GUID.
+         *
+         * \note This class is final. Therefore, you cannot derive it.
+         * Due to obvious reasons, it is important to keep the OOP aspect
+         * of the entity system to a minimum.
+         */
         class Entity final
         {
         private:
@@ -72,8 +78,8 @@ namespace studium
              * entity.
              *
              * \return A const pointer to the desired component.
-             * \warn DO NOT attempt to delete the component manually. Use the proper
-             * function instead.
+             * \warning DO NOT attempt to delete the component manually. Use the
+             * proper function instead.
             */
             template<typename T> T* const get_component()
             {
@@ -127,6 +133,7 @@ namespace studium
         {
             friend class Entity;
         protected:
+            //! Direct reference to the parent entity.
             std::optional<Entity> parent = std::nullopt;
         public:
             virtual ~Component() {}

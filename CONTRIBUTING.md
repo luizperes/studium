@@ -52,14 +52,18 @@ Here is an example of a documented class.
       class Foo {
       public:
        /*!
-        * Brief description for my method.
+        * \brief Brief description for my method.
         *
         * Elaborate description for my method and etc.
+        * \param parameter A parameter.
+        * \return Whatever it returns.
+        * \note A note about the last docs field.
+        * \warning A warning.
+        * \todo Whatever still needs to be done.
         */
-        void my_method();
+        int my_method(int parameter);
         
-        //! Brief description of a succint method.
-        //  Does something.
+        //! Brief description of one line.
         void brief_method();
       };
   ```

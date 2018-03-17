@@ -35,8 +35,10 @@ namespace studium
         const float EPSILON = 1e-8;
         //! Float representation for the value of Pi.
         const float PI      = 3.14159265358979323846;
-        //! Float representation for the value of Tau.
-        //  Represents two times the value of Pi.
+        /*!
+         * \brief Float representation for the value of Tau.
+         * Represents two times the value of Pi.
+         */
         const float TAU     = 6.28318530717958647692;
     }
 }

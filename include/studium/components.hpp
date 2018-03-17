@@ -5,19 +5,19 @@
 
 namespace studium
 {
-    //! Wraps common components which you might want to use to build your
-    //  entities.
+    //! Wraps common components which you might want to use to build your entities.
     namespace components
     {
-        //! Generic component for an object that performs logic update
-        //  whenever it can.
+        //! Generic component for an object that performs logic update whenever it can.
         class UpdateComponent : public studium::entity::Component
         {
         public:
             virtual ~UpdateComponent() {}
-            //! Performs a logic update for the entity.
-            //  \param delta_time Time difference, in milliseconds,
-            //  from last to current frame.
+            /*!
+             * \brief Performs a logic update for the entity.
+             * \param delta_time Time difference, in milliseconds,
+             * from last to current frame.
+             */
             virtual void update(float delta_time) {};
         };
             
@@ -26,13 +26,17 @@ namespace studium
         {
         public:
             virtual ~RenderComponent() {}
-            //! Performs on-screen drawing for the entity.
-            //  \param renderer Direct reference to the renderer.
+            /*!
+             * \brief Performs on-screen drawing for the entity.
+             * \param renderer Direct reference to the renderer.
+             */
             virtual void draw(studium::render::Renderer2D& renderer) {};
         };
             
-        //! Generic component for an object that can be repositioned
-        //  on screen.
+        /*!
+         * \brief Generic component for an object that can be repositioned
+         * on screen.
+         */
         class TransformComponent : public studium::entity::Component
         {
         private:
@@ -58,22 +62,30 @@ namespace studium
             glm::vec3 get_rotation() const;
             //! Yields the scale for the transform.
             glm::vec3 get_scale()    const;
-            //! Yields the Model matrix for the entity.
-            //  \note If any of the attributes on this transform
-            //  component has been changed, the cached matrix is
-            //  recalculated.
+            /*!
+             * \brief Yields the Model matrix for the entity.
+             * \note If any of the attributes on this transform
+             * component has been changed, the cached matrix is
+             * recalculated.
+             */
             glm::mat4 get_matrix();
 
-            //! Sets the position to a new value.
-            //  \param position The new position to be set.
+            /*!
+             * \brief Sets the position to a new value.
+             * \param position The new position to be set.
+             */
             void set_position(glm::vec3 position);
-            //! Sets the rotation to a new value.
-            //  \param rotation The new rotation to be set.
-            //  \todo This function needs a way to really set the
-            //  rotation for a specific axis. Maybe use quaternions?
+            /*!
+             * \brief Sets the rotation to a new value.
+             * \param rotation The new rotation to be set.
+             * \todo This function needs a way to really set the
+             * rotation for a specific axis. Maybe use quaternions?
+             */
             void set_rotation(glm::vec3 rotation);
-            //! Sets the scale to a new value.
-            //  \param scale The new scale to be set.
+            /*!
+             * \brief Sets the scale to a new value.
+             * \param scale The new scale to be set.
+             */
             void set_scale(glm::vec3 scale);
         };
     }
