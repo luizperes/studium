@@ -6,6 +6,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 ### Added
+- Entity/Component system.
 - `consts` namespace with useful constant values.
 - New proper README file, still a work-in-progress.
 - Doxygen documentation support, along with some documentation.

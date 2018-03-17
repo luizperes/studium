@@ -1,6 +1,5 @@
 #include <studium/input.hpp>
 
-//! Callback function for keyboard input events.
 void
 studium::input::keyboard_callback(GLFWwindow* window,
                                   int         key,
@@ -11,7 +10,7 @@ studium::input::keyboard_callback(GLFWwindow* window,
     // Well, uhm, TO-DO!
 }
 
-//! Callback function for mouse repositioning events.
+
 void
 studium::input::mouse_pos_callback(GLFWwindow* window,
                                    double      xpos,
@@ -20,7 +19,7 @@ studium::input::mouse_pos_callback(GLFWwindow* window,
     // TODO
 }
 
-//! Callback function for mouse click events.
+
 void
 studium::input::mouse_btn_callback(GLFWwindow* window,
                                    int         button,
@@ -30,7 +29,7 @@ studium::input::mouse_btn_callback(GLFWwindow* window,
     // also TODO
 }
 
-//! Callback function for mouse scroll wheel events.
+
 void
 studium::input::mouse_scl_callback(GLFWwindow* window,
                                    double      xoffset,
@@ -39,7 +38,7 @@ studium::input::mouse_scl_callback(GLFWwindow* window,
     // TODO
 }
 
-//! Callback function for gamepad events.
+
 void
 studium::input::gamepad_callback(int gamepad, int event)
 {

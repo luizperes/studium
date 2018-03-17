@@ -18,7 +18,7 @@ string(TIMESTAMP ENGINE_VERSION
 
 # Default project definitions
 add_definitions(-DSTUDIUM_VERSION_STRING="${ENGINE_VERSION}")
-set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} --std=c++11")
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} --std=c++17")
 
 
 # Project dependencies

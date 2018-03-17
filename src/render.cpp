@@ -11,8 +11,7 @@ studium::render::Renderer2D::~Renderer2D()
     this->unload();
 }
 
-//!  Initializes both the window and the rendering context.
-//   If already initialized, does nothing.
+
 bool
 studium::render::Renderer2D::init()
 {
@@ -67,8 +66,7 @@ studium::render::Renderer2D::init()
 }
 
 
-//!  Performs an infinite game loop, while the game doesn't trigger an exit signal
-//   to the window.
+
 bool
 studium::render::Renderer2D::game_loop()
 {
@@ -89,7 +87,7 @@ studium::render::Renderer2D::game_loop()
     }
 }
 
-//!  Performs a full disposal of the window and the rendering context.
+
 void
 studium::render::Renderer2D::unload()
 {
