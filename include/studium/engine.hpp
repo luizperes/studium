@@ -3,6 +3,7 @@
 #include <studium/render.hpp>
 #include <studium/entity.hpp>
 #include <studium/components.hpp>
+#include <studium/scripting.hpp>
 
 //! Global namespace for all Studium controls.
 namespace studium

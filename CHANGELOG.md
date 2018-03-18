@@ -6,6 +6,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 ### Added
+- Emacs support for `cmake-ide` using a `.dir-locals.el` file which automatically detects your working dir.
 - Entity/Component system.
 - `consts` namespace with useful constant values.
 - New proper README file, still a work-in-progress.

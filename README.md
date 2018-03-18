@@ -40,6 +40,10 @@ The following libraries and software are required to build `studium`:
 - Epoxy >= 1.4.3
 - GLM >= 0.9.8
 
+The following libraries are optional, but recommended, to build `studium`:
+
+- ChickenScheme >= 4.12
+
 Consult your trusted repositories for the packages for developing software with these libraries.
 
 ### Building
@@ -56,6 +60,20 @@ $ make
 ```
 
 This will create a `libstudium.a` file, which is our library, and the `engine_test` binary, which is the general test project.
+
+#### Using Emacs
+
+This project has an out-of-the-box support for [`cmake-ide`](https://github.com/atilaneves/cmake-ide) on Emacs. Simply open any
+code file on any subdirectory, and the `.dir-locals.el` will set the `cmake-ide` variables for you (this process may result on
+Emacs specifically asking you if you really want to run unsafe code, since the bindings rely on the usage of the `eval` form).
+Once it is done, you can run them build commands directly from Emacs:
+
+```
+M-x cmake-ide-run-cmake
+M-x cmake-ide-compile
+```
+
+This will create a `*compilation*` buffer from where you can look at the actual compilation process.
 
 ### Installing
 

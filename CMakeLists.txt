@@ -17,8 +17,9 @@ string(TIMESTAMP ENGINE_VERSION
   "${ENGINE_VERSION_MAJOR}.${ENGINE_VERSION_MINOR}.${ENGINE_VERSION_REVISION}")
 
 # Default project definitions
-add_definitions(-DSTUDIUM_VERSION_STRING="${ENGINE_VERSION}")
+add_definitions(-DSTUDIUM_VERSION_STRING=${ENGINE_VERSION})
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} --std=c++17")
+set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} "${CMAKE_SOURCE_DIR}/cmake/Modules")
 
 
 # Project dependencies
@@ -27,6 +28,9 @@ PKG_SEARCH_MODULE(GLM REQUIRED glm>=0.9.8)
 PKG_SEARCH_MODULE(EPOXY REQUIRED epoxy>=1.4.3)
 find_package(glfw3 3.2 REQUIRED)
 find_package(OpenGL REQUIRED)
+
+# Optional dependencies
+find_package(Chicken 4.12 OPTIONAL_COMPONENTS)
 
 
 # Default engine lib definitions
@@ -62,6 +66,15 @@ target_link_libraries(engine_test
   ${EPOXY_LIBRARIES}
   glfw
   studium)
+
+# Link Chicken Scheme
+IF(CHICKEN_INCLUDE_DIRS)
+  add_definitions(-DSTUDIUM_SCRIPTING)
+  target_link_libraries(engine_test chicken)
+  target_include_directories(studium PUBLIC ${CHICKEN_INCLUDE_DIRS})
+ENDIF()
+
+
 
 
 
