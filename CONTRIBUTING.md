@@ -1,17 +1,17 @@
 # Contributing to Studium Engine
 
-This contribution guideline may change in the future. I'll make sure to highlight whatever new stuff for some period of time.
+This contribution guideline may change in the future. I'll make sure to highlight whatever I consider new for some time.
 
 Please read this file fully and carefully, preferably before contributing. For any questions and suggestions, you may also file an issue.
 
 ## Bug reporting
 You are free to file issues on the repository if you find any bugs.
-You can also submit your own patches to the software, just take a look at the
+You can also submit your own patches to the software. That being the case, take a look at the
 coding guidelines below.
 
 
 ## Pull requests
-You can send your pull requests anytime with hotfixes for anything that I might
+You may send your pull requests anytime with hotfixes for anything that I might
 not have noticed or anything that could improve this software. However, I would
 appreciate if you follow the following coding conventions which I have tailored
 to make the code more elegant and more readable. You may also notice that most
@@ -70,7 +70,7 @@ Here is an example of a documented class.
 
 
 ### Commit
-It is advisable to follow good commit messages practices for this project. You can [read more about this here](https://chris.beams.io/posts/git-commit/). I'll also use this same resource and cite what those best practices are:
+It is advisable to follow good commit messages practices for this project. You may [read more about thats here](https://chris.beams.io/posts/git-commit/). I'll also use this very same resource and cite what the best practices are:
 
 - Separate subject from body with a blank line
 - Limit the subject line to 50 characters
@@ -83,4 +83,4 @@ It is advisable to follow good commit messages practices for this project. You c
 
 # Anything else?
 
-If something is missing or if you have a question, please fill an issue on the repository, and I'll gladly provide an answer, or make the answer clear on this file.
+If something is missing or if you have a question, please fill an issue on the repository and I'll gladly provide an answer. If I feel it is very important question, I will make sure the answer is on this file.

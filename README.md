@@ -7,24 +7,24 @@ Studium is a modern engine for building 2D and Pixel Art games in C++.
 
 ## About the Project
 
-Studium is a game engine for 2D games, based on everything I've learned so far about game development, while developing other engines.
-This engine is being designed to be used by me for a long period of time, be it professionally or for quick sketches.
-While this may seem ambitions, I do believe that, if one could take the time needed studying good programming patterns and being extra
-careful while building its own game engine, it is possible to build something robust and easy to hack into, if new features are needed.
-Though this engine really is supposed to be monolithic, the coding structure and documentation should provide easier means to debug
+Studium is a game engine for 2D games, based on everything I've learned so far about game development while developing using other engines.
+This engine has been designed to be used by me for a long time, that being professionally or for quick sketches.
+While this may seem ambitious, I do believe that, if one could take the time needed studying good programming patterns and being extra
+careful while building their own game engine, it is possible to build something robust and easy to hack into, in case new features are needed.
+Though this engine really is supposed to be monolithic, the coding structure and documentation should provide better means to debug
 issues and add new features.
 
 Most of the design, documentation and coding principles applied here remount back to my brief and ongoing experience with the Rust
-language, so even though I opted to write this engine in C++, these principles help make the code easy to read by programmers of any
-level.
+language, so even though I opted to write this engine in C++, I believe that the Rust principles help make the code easier to read by programmers of
+different levels.
 
-Studium tries to use a modern C++ while still remaining as close as possible to C itself, without breaking coding consistency. That
-means trying to avoid an overuse of object-oriented programming and STL, though it is not a forbidden resource to use, since the
-game programming industry favors C++ anyway. Despite that, this engine is primarily developed for Linux systems, so that's where it
+Studium tries to use modern C++ while still remaining as close as possible to C itself, without breaking coding consistency. That
+means trying to avoid an overuse of object-oriented programming and STL, though they are not forbidden resources to use, since the
+game programming industry favors C++ anyways. Despite that, this engine is primarily developed for Linux systems, so that's where it
 should be running first. However, other operational systems are not excluded from the equation; favoring cross-platform libraries is
 a must.
 
-The exceeding engine features are also supposed to be kept optional on compilation, though it is best if the engine is used at its
+The exceeding engine features are also supposed to be kept optional on compilation, however, the best is that the engine is used at its
 full potential.
 
 ## Getting Started
@@ -48,9 +48,7 @@ Consult your trusted repositories for the packages for developing software with 
 
 ### Building
 
-Building Studium is pretty much straightforward.
-
-Given that you already have the dependencies installed, you can build it using CMake:
+given that you already have the dependencies installed, Building Studium is very straightforward. You may build it by using CMake:
 
 ```bash
 $ cd path/to/repository
@@ -59,7 +57,7 @@ $ cmake ..
 $ make
 ```
 
-This will create a `libstudium.a` file, which is our library, and the `engine_test` binary, which is the general test project.
+This will create a `libstudium.a` file, which is our library, and a `engine_test` binary file, which is the general test project.
 
 #### Using Emacs
 
@@ -73,11 +71,11 @@ M-x cmake-ide-run-cmake
 M-x cmake-ide-compile
 ```
 
-This will create a `*compilation*` buffer from where you can look at the actual compilation process.
+This will create a `*compilation*` buffer in which you may be able to look at the actual compilation process.
 
 ### Installing
 
-After building the software using the instructions from previous section, just use the following command to install the software.
+After building the software using the instructions from previous section, use the following command to install the software:
 
 ```bash
 $ sudo make install
@@ -88,7 +86,7 @@ installed to `/usr/local/lib`.
 
 ## Contributing
 
-If you wish to help with the development of this software, please check the [CONTRIBUTING](CONTRIBUTING.md) file for coding and commit
+If you wish to help with the development of this software, please check the [CONTRIBUTING](CONTRIBUTING.md) file for coding and committing
 guidelines.
 
 You can also refer to the [ongoing projects page](https://github.com/luksamuk/studium/projects) of this repository, so you can more
@@ -106,7 +104,7 @@ This project still lacks a proper way to perform unit tests. Once it is added, t
 ## Recommended Tools 
 
 Below is a list of suggested software to work with this project. Most of them are used by me on a daily basis.
-This list will be updated as I advance on this project's development.
+This list will be updated as I advance on the development of this project.
 
 - Emacs
 
@@ -122,4 +120,4 @@ Links to help follow good practices and whatever.
 
 ## Licensing
 
-The code in this project is licensed under MIT license. For more details, check the [LICENSE](LICENSE) file.
+The code in this project is licensed under MIT license. For more details, check out the [LICENSE](LICENSE) file.
